@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="fedex-bg-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5916A3" />
+      <stop offset="100%" stop-color="#3B0E6E" />
+    </linearGradient>
+    <linearGradient id="fedex-bg-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#671BBF" />
+      <stop offset="100%" stop-color="#471285" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1" stdDeviation="0.8" flood-opacity="0.35" />
+    </filter>
+  </defs>
+  <style>
+    .brand-tile { fill: url(#fedex-bg-light); }
+    @media (prefers-color-scheme: dark) {
+      .brand-tile { fill: url(#fedex-bg-dark); }
+    }
+  </style>
+
+  <!-- Squircle Base Tile -->
+  <rect class="brand-tile" x="2" y="2" width="60" height="60" rx="15" ry="15" />
+
+  <!-- Subtle Top/Inner Gloss Rim -->
+  <rect x="3" y="3" width="58" height="58" rx="14" ry="14" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="1.2" />
+  <path d="M 16 3.5 L 48 3.5" stroke="rgba(255,255,255,0.4)" stroke-width="1.2" stroke-linecap="round" />
+
+  <!-- FedEx Wordmark -->
+  <g filter="url(#shadow)">
+    <text
+      x="32"
+      y="39.5"
+      text-anchor="middle"
+      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+      font-weight="900"
+      font-size="20.5"
+      letter-spacing="-1.2px"
+    >
+      <tspan fill="#FFFFFF">Fed</tspan><tspan fill="#FF6200">Ex</tspan>
+    </text>
+  </g>
+</svg>
+
